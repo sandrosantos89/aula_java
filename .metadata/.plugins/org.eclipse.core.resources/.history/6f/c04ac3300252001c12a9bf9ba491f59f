@@ -1,0 +1,24 @@
+package aplication;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		double xA, xB, xC, yA, yB, yC;
+		
+		System.out.println("Digites os lados do Triangulo X: ");
+		xA = sc.nextDouble();
+		xB = sc.nextDouble();
+		xC = sc.nextDouble();
+		
+		System.out.println("Digites os lados do Triangulo Y: ");
+		yA = sc.nextDouble();
+		yB = sc.nextDouble();
+		yC = sc.nextDouble();
+		
+	}
+
+}

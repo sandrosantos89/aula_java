@@ -1,0 +1,53 @@
+package curso_udemy;
+
+import java.util.Locale;
+import java.util.Scanner;
+import aplication.Account;
+
+public class AplicationAccount {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		Account account;
+
+		System.out.println("Entre com sua conta: ");
+		int number = sc.nextInt();
+		System.out.println("Entre com nome: ");
+		sc.nextLine();
+		String holder = sc.nextLine();
+		System.out.println("Deposito inicial (s/n)?");
+		char response = sc.next().charAt(0);
+		if (response == 's') {
+			System.out.print("Digite o valor inicial: ");
+			double initialDeposit = sc.nextDouble();
+			account = new Account(number, holder, initialDeposit);
+		} else {
+			account = new Account(number, holder);
+		}
+
+		System.out.println();
+		System.out.println("Dados da conta: ");
+		System.out.println(account);
+
+		System.out.println();
+
+		System.out.print("Digite o valor para deposito: ");
+		double depositValue = sc.nextDouble();
+		account.deposit(depositValue);
+		System.out.println();
+		System.out.println("Saldo atualizado da conta: ");
+		System.out.println(account);
+
+		System.out.println();
+		System.out.print("Digite o valor para Saque: ");
+		double withdrawValue = sc.nextDouble();
+		account.withdraw(withdrawValue);
+
+		System.out.println();
+		System.out.println("Saldo atualizado da conta: ");
+		System.out.println(account);
+		sc.close();
+
+	}
+
+}

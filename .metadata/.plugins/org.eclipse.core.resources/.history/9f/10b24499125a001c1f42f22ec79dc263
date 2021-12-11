@@ -1,0 +1,30 @@
+package aplicacao;
+
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Calendar;
+import java.util.Date;
+
+public class Calendario {
+
+	public static void main(String[] args) {
+
+		SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
+		Date d = Date.from(Instant.parse("2021-12-10T15:42:07Z"));
+
+		System.out.println(dt.format(d));
+
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(d);
+
+		int minutes = cal.get(Calendar.MINUTE);
+		
+		cal.add(Calendar.HOUR_OF_DAY, 4);
+		d = cal.getTime();
+
+		System.out.println(dt.format(d));
+		System.out.println("Minutos: " + minutes);
+	}
+
+}

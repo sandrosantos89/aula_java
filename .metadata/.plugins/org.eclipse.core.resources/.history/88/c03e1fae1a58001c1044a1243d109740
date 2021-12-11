@@ -1,0 +1,29 @@
+package aplicacao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Lista {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+
+		list.add("Sandro");
+		list.add("Bianca");
+		list.add("Manuela");
+		list.add(1, "Santos");// adicionando elementos na lista
+
+		System.out.println(list.size());// Tamanho da lista
+		
+		list.remove(1);
+		
+		System.out.println(list.size());
+		
+		for (String x : list) {
+			System.out.println(x);
+		}
+
+	}
+
+}

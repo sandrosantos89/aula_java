@@ -1,0 +1,13 @@
+package aplicacao;
+
+import java.util.List;
+
+public class Lista {
+
+	public static void main(String[] args) {
+
+		List<Integer> list;
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package aplication;
+
+public class Produto {
+
+	String nome;
+	double preco;
+	int quantidade;
+
+	public double TotalValueInEstoque(double calculo) {
+
+		return calculo = preco * quantidade;
+
+	}
+}

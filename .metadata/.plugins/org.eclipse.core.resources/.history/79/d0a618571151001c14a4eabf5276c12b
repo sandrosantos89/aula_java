@@ -1,0 +1,12 @@
+package curso_udemy;
+
+public class Udemy {
+	public static void main(String[] args) {
+
+		double x = 10.3456;
+
+		System.out.printf("%.2f%n", x); //delimita quantos num depois da vírgula
+
+	}
+
+}
